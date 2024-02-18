@@ -28,13 +28,16 @@ for (const seat of seats) {
     selectedContainer.appendChild(tr);
     event.target.style.backgroundColor = "green";
     event.target.setAttribute("disabled", true);
- 
+
+    totalPrice("total-cost", price);
+    grandPrice("grand-total", price);
+    
+  
      
     setInnerText("ticket-count", count);
     setInnerText("seat-left", totalSeat);
 
 
-    totalPrice("total-cost", price);
     
   });
 }
@@ -47,33 +50,31 @@ function totalPrice(id, value) {
  
 }
 
-
+function grandPrice(id, value) {
+  const totalCost = document.getElementById("grand-total").innerText;
+  const total = parseInt(totalCost) + parseInt(value);
+  document.getElementById("grand-total").innerText = total;
+ 
+}
 const btn = document.getElementById("apply-btn");
-
 btn.addEventListener("click", function(){
-
+// get the value from input
 const couponCode = document.getElementById("input-field").value;
-
-const convertTotal = getValue("total");
-
+const convertTotal = getValue("total-cost");
+const convertTotal1 = convertTotal - convertTotal * 0.15 ;
+const convertTotal2 = convertTotal - convertTotal * 0.20 ;
+if (totalCost > 0){
     if (couponCode === "NEW15"){
-      setInnerText("grand-total", (convertTotal - (convertTotal * 0.15)));
-
-    // const grandTotal = document.getElementById("total");
-    // grandTotal.innerText = totalPrice - discountAmount.toFixed(2);
-    
-    // document.getElementById("input-field").value = " ";
-    // input field clear korar jonno
-}
-else if (couponCode === "Couple 20"){
-  setInnerText("grand-total", convertTotal - (convertTotal * 0.20));
+        setInnerText("grand-total", convertTotal1);
+      } else if (couponCode === "Coupon 20") {
+        setInnerText("grand-total", convertTotal2);
+      } else {
+        setInnerText("grand-total", convertTotal);
+      }}
+  else { alert ("Plz select atleast one ticket")}
+    });
 
 
-}
-else {
-      setInnerText("grand-total", convertTotal);
-    }
-});
 
 
 function setInnerText(id, value) {

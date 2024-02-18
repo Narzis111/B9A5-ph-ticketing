@@ -6,12 +6,14 @@ const seats = document.getElementsByClassName("seat");
 for (const seat of seats) {
 
   seat.addEventListener("click", function handleSelect(event) {
+   
     count += 1;
-    totalSeat -= 1;
+    if (totalSeat !== 0){
+    totalSeat -= 1;}
     const ticketNumber = event.target.innerText;
     const ticketClass = "Economy";
     const price = 550;
-    console.log("nodelist");
+  
     const selectedContainer = document.getElementById("ticket-row-container");
     const tr = document.createElement("tr");
     const td = document.createElement("td");
@@ -24,15 +26,16 @@ for (const seat of seats) {
     tr.appendChild(td);
     tr.appendChild(td1);
     tr.appendChild(td2);
-
+  
     selectedContainer.appendChild(tr);
     event.target.style.backgroundColor = "green";
     event.target.setAttribute("disabled", true);
+  
 
     totalPrice("total-cost", price);
     grandPrice("grand-total", price);
     
-  
+
      
     setInnerText("ticket-count", count);
     setInnerText("seat-left", totalSeat);
@@ -60,7 +63,7 @@ const btn = document.getElementById("apply-btn");
 btn.addEventListener("click", function(){
 // get the value from input
 const couponCode = document.getElementById("input-field").value;
-const convertTotal = getValue("total-cost");
+const convertTotal = getValue("total");
 const convertTotal1 = convertTotal - convertTotal * 0.15 ;
 const convertTotal2 = convertTotal - convertTotal * 0.20 ;
 if (totalCost > 0){

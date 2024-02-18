@@ -70,8 +70,8 @@
       </div>
     </div>
     <div class="hero min-h-dvh rounded-lg" style="background-image: url(./images/banner.png);">
-      <div></div>
-      <div class="hero-content text-center text-neutral-content">
+      
+      <div class="hero-content text-center text-neutral-content flex flex-col relative">
         <div class="max-w-xl">
           <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-g_color">P Paribahan</span>
           </h1>
@@ -80,8 +80,36 @@
           <a href="#booking"><button class="btn border-none bg-g_color text-black">Buy Tickets</button>
           </a>
         </div>
+        <div class="absolute -bottom-60 left-1/2 -translate-x-1/2 w-full text-center">
+      
+          <div class="flex flex-col lg:flex-row lg:justify-evenly gap-5">
+            <div class="flex justify-between gap-5 p-4 bg-white rounded-lg border-b-2 border-b-green-700 ">
+              <div><img src="./images/people.png" alt="" srcset=""></div>
+              <div>
+                <h3 class="text-[#030712] text-2xl font-extrabold">500K+</h3>
+                <p>Registered users</p>
+              </div>
+            </div>
+            <div class="flex justify-between gap-5 p-4 bg-white rounded-lg border-b-2 border-b-green-700">
+              <div><img src="./images/ticket-cupon.png" alt="" srcset=""></div>
+              <div>
+                <h3 class="text-[#030712] text-2xl font-extrabold">1.7 lacks</h3>
+                <p>Tickets sold</p>
+              </div>
+            </div>
+            <div class="flex justify-between gap-5 p-4 bg-white rounded-lg border-b-2 border-b-green-700">
+              <div><img src="./images/stoppage.png" alt="" srcset=""></div>
+              <div>
+                <h3 class="text-[#030712] text-2xl font-extrabold">80K+</h3>
+                <p>Rental partners</p>
+              </div>
+            </div>
+          
+          </div>
+        </div>
       </div>
     </div>
+   
   </header>
   <main class="max-w-6xl mx-auto">
     <section class="card-disc">
@@ -130,21 +158,21 @@
 
     <!-- class="lg:px-24 px-8 mx-auto" ticket section start-->
     <section class="mx-auto" id="booking">
-      <div class="text-center">
+      <div class="text-center space-y-5">
         <h1 class="text-title_color text-2xl lg:text-4xl font-bold m-0">P.H Paribahan</h1>
-        <p class="max-w-2xl text-center mx-auto">Yes, you can run unit tests and view the results directly within the
+        <p class="max-w-2xl text-center mx-auto pb-5">Yes, you can run unit tests and view the results directly within the
           app. The integrated testing features allow for a streamlined .</p>
 
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 max-h-full">
         <!-- ===================== -->
-        <div class="col-span-2 mx-auto w-full">
+        <div class="lg:col-span-2 col-span-1 mx-auto w-full">
 
           <div class="flex justify-between">
             <div class="flex justify-between gap-5">
               <div><img src="./images/bus-logo.png" alt="" srcset=""></div>
               <div>
-                <h3>Greenline Paribahan</h3>
+                <h3 class="font-extrabold">Greenline Paribahan</h3>
                 <p>Coach-009-WEB ! AC_Business</p>
               </div>
             </div>
@@ -161,7 +189,7 @@
             <div>at 9:00 AM</div>
           </div>
 
-          <div class="flex justify-between mt-5">
+          <div class="flex justify-between mt-5 flex-col lg:flex-row">
             <button class="btn btn-outline">Boarding Point - Laxmipur</button>
             <button class="btn btn-outline">Dropping Point - Bogura</button>
             <button class="btn btn-outline">Est. Time - 11 Hour</button>
@@ -184,7 +212,7 @@
       <!-- =============ticket -->
       <div class="grid lg:grid-cols-2 max-h-full grid-cols-1 mt-20 gap-6">
         <div>
-          <h3 class="text-['Raleway'] font-bold text-2xl">Select your seat</h3>
+          <h3 class="text-['Raleway'] font-bold text-2xl pb-3">Select your seat</h3>
           <hr>
           <div class="flex justify-between">
             <p><img src="./images/seat-gray.png" alt="" srcset="">Available</p>
@@ -247,43 +275,39 @@
 
           <div class="flex justify-center gap-6 my-2 w-full">
             <kbd class="kbd button-outline bg-white border-none kbd-lg">F</kbd>
-            <kbd class="kbd w-full kbd-lg">F1</kbd>
-            <kbd class="kbd w-full kbd-lg">F2</kbd>
-            <kbd class="kbd w-full kbd-lg">F3</kbd>
-            <kbd class="kbd w-full kbd-lg">F4</kbd>
+            <kbd class="kbd seat w-full kbd-lg">F1</kbd>
+            <kbd class="kbd seat w-full kbd-lg">F2</kbd>
+            <kbd class="kbd seat w-full kbd-lg">F3</kbd>
+            <kbd class="kbd seat w-full kbd-lg">F4</kbd>
           </div>
           <div class="flex justify-center gap-6 my-2 w-full">
             <kbd class="kbd button-outline bg-white border-none kbd-lg">G</kbd>
-            <kbd class="kbd w-full kbd-lg">G1</kbd>
-            <kbd class="kbd w-full kbd-lg">G2</kbd>
-            <kbd class="kbd w-full kbd-lg">G3</kbd>
-            <kbd class="kbd w-full kbd-lg">G4</kbd>
+            <kbd class="kbd seat w-full kbd-lg">G1</kbd>
+            <kbd class="kbd seat w-full kbd-lg">G2</kbd>
+            <kbd class="kbd seat w-full kbd-lg">G3</kbd>
+            <kbd class="kbd seat w-full kbd-lg">G4</kbd>
           </div>
           <div class="flex justify-center gap-6 my-2 w-full">
             <kbd class="kbd button-outline bg-white border-none kbd-lg">H</kbd>
-            <kbd class="kbd w-full kbd-lg">H1</kbd>
-            <kbd class="kbd w-full kbd-lg">H2</kbd>
-            <kbd class="kbd w-full kbd-lg">H3</kbd>
-            <kbd class="kbd w-full kbd-lg">H4</kbd>
+            <kbd class="kbd seat w-full kbd-lg">H1</kbd>
+            <kbd class="kbd seat w-full kbd-lg">H2</kbd>
+            <kbd class="kbd seat w-full kbd-lg">H3</kbd>
+            <kbd class="kbd seat w-full kbd-lg">H4</kbd>
           </div>
           <div class="flex justify-center gap-6 my-2 w-full">
             <kbd class="kbd button-outline bg-white border-none kbd-lg">I</kbd>
-            <kbd class="kbd w-full kbd-lg">I1</kbd>
-            <kbd class="kbd w-full kbd-lg">I2</kbd>
-            <kbd class="kbd w-full kbd-lg">I3</kbd>
-            <kbd class="kbd w-full kbd-lg">I4</kbd>
+            <kbd class="kbd seat w-full kbd-lg">I1</kbd>
+            <kbd class="kbd seat w-full kbd-lg">I2</kbd>
+            <kbd class="kbd seat w-full kbd-lg">I3</kbd>
+            <kbd class="kbd seat w-full kbd-lg">I4</kbd>
           </div>
           <div class="flex justify-center gap-6 my-2 w-full">
             <kbd class="kbd button-outline bg-white border-none kbd-lg">J</kbd>
-            <kbd class="kbd w-full kbd-lg">J1</kbd>
-            <kbd class="kbd w-full kbd-lg">J2</kbd>
-            <kbd class="kbd w-full kbd-lg">J3</kbd>
-            <kbd class="kbd w-full kbd-lg">J4</kbd>
+            <kbd class="kbd seat w-full kbd-lg">J1</kbd>
+            <kbd class="kbd seat w-full kbd-lg">J2</kbd>
+            <kbd class="kbd seat w-full kbd-lg">J3</kbd>
+            <kbd class="kbd seat w-full kbd-lg">J4</kbd>
           </div>
-
-
-
-
         </div>
         <!-- seat==============form +++++++++++++++-->
         <div class="border-dashed border-l-2 pl-5 space-y-3">
@@ -334,7 +358,7 @@
             <div class="bg-white p-6 rounded-md">
 
               <div class="join">
-                <input id="input-field" class="input input-bordered join-item w-96" placeholder="Have any coupon?" />
+                <input id="input-field" class="input input-bordered join-item w-1/2 lg:w-96" placeholder="Have any coupon?" />
 
                 <button id="apply-btn" class="btn join-item rounded-md bg-g_color text-white font-bold">
                   Apply
@@ -355,7 +379,7 @@
 
             <div>
               <label for="Phone Number">Phone Number<span class="font-extrabold text-2xl">*</span></label>
-              <input type="number" placeholder="Enter your phone number"
+              <input type="number" required placeholder="Enter your phone number"
                 class="input input-bordered w-full bg-gray-100" />
             </div>
             <div>
